@@ -1,0 +1,45 @@
+{
+  "name": "@taulfsime/shelly-transports-ts",
+  "version": "0.0.1",
+  "description": "",
+  "keywords": [
+    "shelly",
+    "typescript"
+  ],
+  "homepage": "https://github.com/taulfsime/shelly-transports-ts#readme",
+  "bugs": {
+    "url": "https://github.com/taulfsime/shelly-transports-ts/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/taulfsime/shelly-transports-ts.git"
+  },
+  "license": "MIT",
+  "author": "taulfsime",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist/",
+    "README.md",
+    "LICENSE"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "format:check": "prettier . --check",
+    "format": "prettier . --write --list-different",
+    "types:check": "tsc --noEmit",
+    "build": "rm -rf dist && tsc",
+    "tests": "vitest run"
+  },
+  "devDependencies": {
+    "prettier": "^3.5.3",
+    "typescript": "^5.8.2",
+    "vitest": "^3.1.2"
+  }
+}
